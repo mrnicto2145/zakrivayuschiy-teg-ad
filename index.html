@@ -257,25 +257,27 @@
         </li>
       </ul>
     </main>
-    <button type="button" class="button save-button" onclick="window['save-window'].showModal();" aria-controls="save-window">
+    <button type="button" class="button save-button" onclick="window['modal'].showModal();" aria-controls="modal">
       <svg class="button__icon">
         <use class="floppy" href="/svg/floppy.svg"></use>
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
-    <dialog class="save-window" id="save-window">
-      <div class="save-window__container">
-        <div class="save-window__content">
-          <svg class="save-window__icon" viewBox="0 0 29 28">
+
+    <dialog class="modal" id="modal">
+      <div class="modal__container">
+        <div class="modal__content">
+          <svg class="modal__icon" viewBox="0 0 29 28">
             <use href="svg/floppy.svg" />
           </svg>
-          <p class="save-window__text">Вставьте дискету,чтобы продолжить</p>
+          <p class="modal__text">Вставьте дискету,чтобы продолжить</p>
         </div>
-        <button type="button" class="button save-window__button" onclick="window['save-window'].close();">
-          <span class="save-window-button__text">ОК</span>
+        <button type="button" class="button modal__button" onclick="window['modal'].close();">
+          <span class="modal-button__text">ОК</span>
         </button>
       </div>
     </dialog>
+    
     <script src="./scripts/like.js"></script>
   </body>
 </html>

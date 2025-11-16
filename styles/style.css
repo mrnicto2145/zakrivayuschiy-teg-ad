@@ -199,11 +199,11 @@
   height: 22px;
 }
 
-.save-window {
+.modal {
   padding: 0;
 }
 
-.save-window__container {
+.modal__container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -212,24 +212,24 @@
   height: 191px;
 }
 
-.save-window__content {
+.modal__content {
   display: flex;
   gap: 20px;
   font-family: var(--accent-font);
 }
 
-.save-window__icon {
+.modal__icon {
   width: 39px;
   height: 39px;
 }
 
-.save-window__button {
+.modal__button {
   width: 293px;
   height: 38px;
   padding: 9px 17px;
 }
 
-.save-window__text {
+.modal__text {
   max-width: 243px;
 }
 
