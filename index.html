@@ -258,18 +258,14 @@
       </ul>
     </main>
     <button type="button" class="button save-button" onclick="window['modal'].showModal();" aria-controls="modal">
-      <svg class="button__icon">
-        <use class="floppy" href="/svg/floppy.svg"></use>
-      </svg>
+      <img class="button__icon" src="/svg/floppy.svg" width="29px" height="28px">
       <span class="button__text">Сохранить на память</span>
     </button>
 
     <dialog class="modal" id="modal">
       <div class="modal__container">
         <div class="modal__content">
-          <svg class="modal__icon" viewBox="0 0 29 28">
-            <use href="svg/floppy.svg" />
-          </svg>
+          <img class="modal__icon" src="/svg/floppy.svg" width="29px" height="28px">
           <p class="modal__text">Вставьте дискету,чтобы продолжить</p>
         </div>
         <button type="button" class="button modal__button" onclick="window['modal'].close();">
