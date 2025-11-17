@@ -11,6 +11,285 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  padding-top: 100px;
+  background-color: var(--background-color);
+  background-image: var(--page-background-img);
+  background-attachment: fixed;
+  display: grid;
+  font-family: var(--base-font);
+  font-weight: var(--base-text-font-weight);
+  font-size: var(--base-font-size);
+  font-variation-settings: "wght" 400;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font, "PressStart2P");
+  font-weight: var(--accent-text-font-weight);
+  margin-bottom: 100px;
+}
+
+.logo-group {
+  width: var(--main-coloumn-width);
+  min-height: 327px;
+  max-height: 368px;
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.logo__header {
+  font-size: 49px;
+}
+
+.logo__text {
+  font-size: 23px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  width: var(--main-coloumn-width);
+}
+
+.card-list__item {
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  width: 100%;
+}
+
+.card__header {
+  padding: 4px 0 6px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card__header-text {
+  font-variation-settings: "wght" 785;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.image {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image::before {
+  position: absolute;
+  top: 25px;
+  right: 13px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  opacity: 50%;
+  text-shadow: 0.5px var(--background-color);
+  content: "";
+  mix-blend-mode: hard-light;
+}
+
+.filter-1 {
+  filter: blur(20%);
+}
+
+.filter-2 {
+  filter: brightness(150%);
+}
+
+.filter-3 {
+  filter: invert(100%);
+}
+
+.filter-4 {
+  filter: contrast(200%);
+}
+
+.filter-5 {
+  filter: grayscale(80%);
+}
+
+.filter-6 {
+  filter: hue-rotate(150deg);
+}
+
+.filter-7 {
+  filter: sepia(80%) saturate(200%);
+}
+
+.card__image:has(.filter__none)::before {
+  content: "</HTML>";
+}
+
+.card__image:has(.filter-1)::before {
+  content: "</HTML>";
+}
+
+.card__image:has(.filter-2)::before {
+  content: "<CSS>";
+}
+
+.card__image:has(.filter-3)::before {
+  content: "<desigions>";
+}
+
+.card__image:has(.filter-4)::before {
+  content: "care";
+}
+
+.card__image:has(.filter-5)::before {
+  content: "<support>";
+}
+
+.card__image:has(.filter-6)::before {
+  content: "<lifes-style: none;>";
+}
+
+.card__image:has(.filter-7)::before {
+  content: "<experience>";
+}
+
+.card__footer {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.p-margin {
+  margin-bottom: 27px;
+}
+
+.card__interactions {
+  display: flex;
+  justify-content: end;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 7px;
+}
+
+.like-icon {
+  width: 36px;
+  height: 39px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.button {
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+}
+
+.save-button {
+  margin: 50px auto 100px auto;
+  width: 335px;
+  height: 55px;
+  gap: 8px;
+}
+
+.button__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.modal {
+  padding: 0;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  width: 353px;
+  height: 191px;
+}
+
+.modal__content {
+  display: flex;
+  gap: 20px;
+  font-family: var(--accent-font);
+}
+
+.modal__icon {
+  width: 39px;
+  height: 39px;
+}
+
+.modal__button {
+  width: 293px;
+  height: 38px;
+  padding: 9px 17px;
+}
+
+.modal__text {
+  max-width: 243px;
+}
+
+@media (width < 376px) {
+  :root {
+    --main-coloumn-width: 100%;
+  }
+
+  .logo__text {
+    font-size: 14px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    width: 306px;
+    height: 80px;
+  }
+
+  .button__icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@supports (
+  (-webkit-text-stroke: 0.5px var(--background-color)) or
+    (text-stroke: 0.5px var(--background-color))
+) {
+  .card__image::before {
+    text-shadow: none;
+    -webkit-text-stroke: 0.5px var(--background-color);
+    text-stroke: 0.5px var(--background-color);
+  }
 }

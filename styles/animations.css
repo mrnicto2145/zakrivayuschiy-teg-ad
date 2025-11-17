@@ -9,3 +9,119 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.button {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  width: 0;
+  height: 100%;
+  background-color: black;
+  transition: width 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button:focus {
+  box-shadow: 2px 2px var(--text-color);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover::before {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.button__text,
+.button__icon {
+  color: var(--background-color);
+  fill: var(--background-color);
+  mix-blend-mode: difference;
+}
+
+.like-icon .heart__contour {
+  fill: var(--base-heart-color);
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .heart__contour {
+  fill: var(--active-heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .heart__body {
+  fill: var(--background-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .heart__body {
+  fill: var(--base-heart-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .heart__body {
+  fill: var(--active-heart-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .heart__body {
+  fill: var(--active-heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .heart__core {
+  fill: var(--background-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .heart__core {
+  fill: var(--base-heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .heart__core {
+  fill: var(--active-heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart__core {
+  fill: var(--active-heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heartScale 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in;
+}
+
+@keyframes heartScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
