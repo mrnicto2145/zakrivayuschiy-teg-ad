@@ -9,6 +9,39 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.button {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  width: 0;
+  height: 100%;
+  background-color: black;
+  transition: width 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button:focus {
+  box-shadow: 2px 2px var(--text-color);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover::before {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.button__text,
+.button__icon {
+  color: var(--background-color);
+  mix-blend-mode: difference;
+}
+
 .like-icon .heart__contour {
   fill: var(--base-heart-color);
   transition: fill 0.1s linear;

@@ -105,6 +105,34 @@
   mix-blend-mode: hard-light;
 }
 
+.filter-1 {
+  filter: blur(20%);
+}
+
+.filter-2 {
+  filter: brightness(70%);
+}
+
+.filter-3 {
+  filter: blur(40%);
+}
+
+.filter-4 {
+  filter: contrast(200%);
+}
+
+.filter-5 {
+  filter: grayscale(80%);
+}
+
+.filter-6 {
+  filter: hue-rotate(20deg);
+}
+
+.filter-7 {
+  filter: hue-rotate(180deg) blur(20%);
+}
+
 .card__image:has(.filter__none)::before {
   content: "</HTML>";
 }
@@ -185,6 +213,7 @@
   font-family: var(--accent-font);
   font-size: 14px;
   padding: 0;
+  position: relative;
 }
 
 .save-button {
