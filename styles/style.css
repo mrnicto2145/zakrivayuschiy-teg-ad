@@ -110,11 +110,11 @@
 }
 
 .filter-2 {
-  filter: brightness(70%);
+  filter: brightness(150%);
 }
 
 .filter-3 {
-  filter: blur(40%);
+  filter: invert(100%);
 }
 
 .filter-4 {
@@ -126,11 +126,11 @@
 }
 
 .filter-6 {
-  filter: hue-rotate(20deg);
+  filter: hue-rotate(150deg);
 }
 
 .filter-7 {
-  filter: hue-rotate(180deg) blur(20%);
+  filter: sepia(80%) saturate(200%);
 }
 
 .card__image:has(.filter__none)::before {
