@@ -36,8 +36,10 @@
   transition: width 0.5s ease-in-out;
 }
 
-.button__text {
+.button__text,
+.button__icon {
   color: var(--background-color);
+  fill: var(--background-color);
   mix-blend-mode: difference;
 }
 
